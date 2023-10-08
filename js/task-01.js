@@ -2,12 +2,9 @@ const ul = document.querySelector('#categories')
 
 console.log(ul)
 
-const liElitem = document.querySelectorAll('.item');
-console.log(liElitem)
+const liElitem = [...ul.children];
 
-const categoryCount = liElitem.length;
-
-console.log(`Number of categories: ${categoryCount}`)
+console.log(`Number of categories: ${liElitem.length}`)
 
 liElitem.forEach((item) => {
     
@@ -15,7 +12,7 @@ liElitem.forEach((item) => {
     console.log(`Category: ${h2Element.textContent}`);
 
     const ulElement = item.querySelector('ul')
-    const liInsideUlTotal = ulElement.querySelectorAll('li');
+    const liInsideUlTotal = ulElement.children;
     console.log(`Elements: ${liInsideUlTotal.length}`);
 })
 
