@@ -3,12 +3,12 @@ const fontSizeInput = document.querySelector("#font-size-control");
 const spanText = document.querySelector("#text");
 
 
-fontSizeInput.addEventListener("change", () => {
+spanText.style.fontSize = `${fontSizeInput.value}px`;
+
+fontSizeInput.addEventListener("input", (event) => {
  
-  const fontSize = fontSizeInput.value + "px";
-  console.log(fontSize)
-  
-  spanText.style.fontSize = fontSize;
+  spanText.style.fontSize = `${event.currentTarget.value}px`
+
 });
 
 
